@@ -1,10 +1,10 @@
 // global constants
-const clueHoldTime = 1000; //how long to hold each clue's light/sound
+var clueHoldTime = 1000; //how long to hold each clue's light/sound
 const cluePauseTime = 333; //how long to pause in between clues
 const nextClueWaitTime = 1000; //how long to wait before starting playback of the clue sequence
 
 //Global Variables
-var pattern = [2, 2, 4, 3, 2, 1, 2, 4]//[3,2,1,2,3,3,3,2,2,2,4,4,4,3,2,1,2,3,3,3,2,2,3,2,1]; // 25 elements "Mary had a Little Lamb"
+var pattern = [2, 5, 2, 4, 5, 6, 3, 2, 5, 1, 2, 6, 4]//13 elements
 var progress = 0;
 var gamePlaying = false;
 var tonePlaying = false;
@@ -61,6 +61,7 @@ function playClueSequence(){
     delay += clueHoldTime
     delay += cluePauseTime;
   }
+  clueHoldTime -= 40; // anything under 76.9
 }
 
 function guess(btn){
@@ -93,10 +94,12 @@ function guess(btn){
 
 // Sound Synthesis Functions
 const freqMap = {
-  1: 560,
-  2: 640,
-  3: 720,
-  4: 800
+  1: 320,
+  2: 400,
+  3: 480,
+  4: 560,
+  5: 720,
+  6: 800
 }
 function playTone(btn,len){ 
   o.frequency.value = freqMap[btn]
