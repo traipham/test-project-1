@@ -1,0 +1,57 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: DejaVu Sans Mono, monospace;
+  margin: 2em;
+  background-color: darkslateblue;
+  color: Mintcream;
+}
+
+h1 {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-style: italic;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+button{
+  padding: 7px;
+  border-radius: 12px;
+}
+
+#gameButtonArea > button {
+  width: 200px;
+  height: 200px;
+  margin: 2px;
+}
+
+#button_1{
+  background: lightgreen;
+}
+#button_1:active, #button_1.lit{
+  background:green;
+}
+
+#button_2{
+  background: lightblue;
+}
+#button_2:active, #button_2.lit{
+  background: blue;
+}
+
+#button_3{
+  background: pink;
+}
+#button_3:active, #button_3.lit{
+  background: red;
+}
+
+#button_4{
+  background: lightyellow;
+}
+#button_4:active, #button_4.lit{
+  background: yellow;
+}
